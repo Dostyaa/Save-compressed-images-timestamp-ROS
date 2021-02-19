@@ -20,7 +20,7 @@ import os
 
 # Instantiate CvBridge
 bridge = CvBridge()
-path='/home/etscan/ros_recordings/2021_25_02_Florent/Images'
+path='/home/....'
 
 
 def image_callback(msg):
@@ -34,7 +34,7 @@ def image_callback(msg):
         # Save your OpenCV2 image as a jpeg 
         time = msg.header.stamp
         cv2.imwrite(os.path.join(path,''+str(time)+'.jpeg'), cv2_img)
-	print("Image enregistree !")
+	print("Image stored")
 
 def main():
     rospy.init_node('image_listener')
